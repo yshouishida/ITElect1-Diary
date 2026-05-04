@@ -4,24 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Jervis College Diary</title>
+  <title>About | jervis College Diary</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <nav class="site-nav">
-    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
-    <ul class="site-nav__links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html" class="active">About</a></li>
-      <li><a href="Diary.html">Diary</a></li>
-      <li><a href="Gallery.html">Gallery</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">jervis<span>.</span></a>
+      <ul class="site-nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html" class="active">About</a></li>
+        <li><a href="Diary.html">Diary</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <div class="page-wrapper">
@@ -35,13 +37,13 @@
     <section class="about-section">
       <div class="about-card">
         <div class="about-card__avatar">
-          <img src="src/IMG_20260216_111054_024-removebg-preview.png" alt="Jervis Profile">
+          <img src="src/picture-resume.png" alt="jervis Profile">
         </div>
         <div class="about-card__info">
-          <h2 class="about-card__name">Jervis</h2>
+          <h2 class="about-card__name">Jervis Verano</h2>
           <p class="about-card__role">College Student &amp; Journal Writer</p>
           <p class="about-card__bio">
-            Hi, I’m Jervis. I’m a college student who likes technology, creativity, and learning new things. I also have
+            Hi, I’m jervis. I’m a college student who likes technology, creativity, and learning new things. I also have
             a growing
             interest in agriculture and how it helps people and the environment.
 
@@ -59,7 +61,7 @@
   </div>
 
   <!-- <footer class="site-footer">
-    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <p class="site-footer__copy">&copy; 2026 jervis. All rights reserved.</p>
     <nav class="site-footer__links">
       <a href="Diary.html">Diary</a>
       <a href="Gallery.html">Gallery</a>
@@ -67,11 +69,17 @@
     </nav>
   </footer> -->
 
-  <script>
+    <script>
     const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+    }));
   </script>
 </body>
 

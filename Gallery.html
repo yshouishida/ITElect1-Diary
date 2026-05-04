@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Jervis College Diary</title>
+  <title>Gallery | jervis College Diary</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav class="site-nav">
-    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
-    <ul class="site-nav__links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Diary.html">Diary</a></li>
-      <li><a href="Gallery.html" class="active">Gallery</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html">jervis<span>.</span></a>
+      <ul class="site-nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Diary.html">Diary</a></li>
+        <li><a href="Gallery.html" class="active">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <div class="page-wrapper">
@@ -32,19 +34,31 @@
 
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 1">
+        <img src="src/exhibit 01.jpg" alt="Memory 1">
       </div>
       <div class="gallery-item">
-        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 2">
+        <img src="src/exhibit 02.jpg" alt="Memory 2">
       </div>
       <div class="gallery-item">
-        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 3">
+        <img src="src/exhibit1.jpg" alt="Memory 3">
+      </div>
+      <div class="gallery-item">
+        <img src="src/Buying.jpg" alt="Memory 4">
+      </div>
+      <div class="gallery-item">
+        <img src="src/Mall.jpg" alt="Memory 5">
+      </div>
+      <div class="gallery-item">
+        <img src="src/Camping.jpg" alt="Memory 6">
+      </div>
+      <div class="gallery-item">
+        <img src="src/yshou-x1.jpg" alt="Memory 7">
       </div>
     </div>
   </div>
 
   <!-- <footer class="site-footer">
-    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <p class="site-footer__copy">&copy; 2026 jervis. All rights reserved.</p>
     <nav class="site-footer__links">
       <a href="About.html">About</a>
       <a href="Diary.html">Diary</a>
@@ -52,11 +66,17 @@
     </nav>
   </footer> -->
 
-  <script>
+    <script>
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+    }));
   </script>
 </body>
 </html>
