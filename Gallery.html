@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Jervis College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Diary.html">Diary</a></li>
+      <li><a href="Gallery.html" class="active">Gallery</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrapper">
+    <header class="page-header">
+      <span class="page-header__label">Memories</span>
+      <h1 class="page-header__title">Gallery</h1>
+      <p class="page-header__desc">Highlights from my life at college.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 1">
+      </div>
+      <div class="gallery-item">
+        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 2">
+      </div>
+      <div class="gallery-item">
+        <img src="src/IMG_20260216_111054_024-removebg-preview." alt="Memory 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <nav class="site-footer__links">
+      <a href="About.html">About</a>
+      <a href="Diary.html">Diary</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </footer> -->
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
+</body>
+</html>

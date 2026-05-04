@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jervis | College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Diary.html">Diary</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__eyebrow">Personal Journal</span>
+      <h1 class="hero__title">Welcome to My<br><em>College Diary</em></h1>
+      <p class="hero__subtitle">
+        A personal space where I document my college journey — memories, lessons, struggles, and dreams, one page at a time.
+      </p>
+      <div class="hero__actions">
+        <a href="Diary.html" class="btn btn-primary">Read My Diary</a>
+        <a href="Gallery.html" class="btn btn-outline">View Gallery</a>
+      </div>
+    </div>
+    <div class="hero__image-wrap">
+      <img src="src/IMG_20260216_111054_024-removebg-preview.png" alt="Jervis">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <nav class="site-footer__links">
+      <a href="About.html">About</a>
+      <a href="Diary.html">Diary</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </footer> -->
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
+</body>
+</html>

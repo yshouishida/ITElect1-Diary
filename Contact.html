@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jervis College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Diary.html">Diary</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrapper">
+    <header class="page-header">
+      <span class="page-header__label">Reach Out</span>
+      <h1 class="page-header__title">Contact Me</h1>
+      <p class="page-header__desc">Have something to share or just want to greet me? I’d enjoy hearing from you.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="contact-wrap">
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Write your message here…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center;">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <nav class="site-footer__links">
+      <a href="About.html">About</a>
+      <a href="Diary.html">Diary</a>
+      <a href="Gallery.html">Gallery</a>
+    </nav>
+  </footer> -->
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = 'var(--color-primary-dark)';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>

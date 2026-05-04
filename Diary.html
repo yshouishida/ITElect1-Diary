@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diary | Jervis College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Diary.html" class="active">Diary</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrapper">
+    <header class="page-header">
+      <span class="page-header__label">My Entries</span>
+      <h1 class="page-header__title">Diary</h1>
+      <p class="page-header__desc">Thoughts, reflections, and memories from my college journey.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="entries-list">
+
+      <article class="entry-card">
+        <p class="entry-card__date">February 25, 2026</p>
+        <h2 class="entry-card__title">On Consistent Learning</h2>
+        <p class="entry-card__body">
+          Today I spent some time thinking about my college journey and everything I have learned so far. I realized how
+          important
+          it is to keep learning every day, even when it feels small or slow. Progress isn’t always loud or obvious
+          sometimes it
+          comes from the quiet, daily effort that builds little by little.
+        </p>
+      </article>
+
+      <article class="entry-card">
+        <p class="entry-card__date">First Day of College</p>
+        <h2 class="entry-card__title">A New Chapter Begins</h2>
+        <p class="entry-card__body">
+          I felt nervous and excited to meet new classmates and begin something new. The hallways felt enormous,
+          stretching
+          endlessly on both sides, like they could swallow me whole. My heart was full of hope and a little fear at the
+          same time.
+          I wondered what this year would bring, who I would meet, and whether I would find my place among all the new
+          faces.
+          Every step I took made me feel both small and full of possibility.
+
+          Then, I met a girl unexpectedly. At first, we just talked and laughed, sharing small moments that felt
+          surprisingly
+          important. Over time, we began spending more time together, discovering little things we had in common and
+          learning from
+          each other. Even though so much was new and sometimes uncertain, we both kept working toward our own goals,
+          supporting
+          each other quietly while still chasing the dreams that mattered most to us.
+        </p>
+      </article>
+
+    </div>
+  </div>
+  <!-- 
+  <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <nav class="site-footer__links">
+      <a href="About.html">About</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </footer> -->
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Jervis College Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Jervis<span>.</span></a>
+    <ul class="site-nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html" class="active">About</a></li>
+      <li><a href="Diary.html">Diary</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-wrapper">
+    <header class="page-header">
+      <span class="page-header__label">Who I Am</span>
+      <h1 class="page-header__title">About Me</h1>
+      <p class="page-header__desc">A little bit about the person behind these pages.</p>
+      <div class="divider"></div>
+    </header>
+
+    <section class="about-section">
+      <div class="about-card">
+        <div class="about-card__avatar">
+          <img src="src/IMG_20260216_111054_024-removebg-preview.png" alt="Jervis Profile">
+        </div>
+        <div class="about-card__info">
+          <h2 class="about-card__name">Jervis</h2>
+          <p class="about-card__role">College Student &amp; Journal Writer</p>
+          <p class="about-card__bio">
+            Hi, I’m Jervis. I’m a college student who likes technology, creativity, and learning new things. I also have
+            a growing
+            interest in agriculture and how it helps people and the environment.
+
+            This diary is my space to write about my college life, what I learn, and the experiences I go through each
+            day. I also
+            share my thoughts about technology, simple creative ideas, and things I discover about farming and nature.
+
+            Each entry shows where I am in my journey right now. It reminds me of my progress, the challenges I face,
+            and how much I
+            continue to grow over time.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- <footer class="site-footer">
+    <p class="site-footer__copy">&copy; 2026 Jervis. All rights reserved.</p>
+    <nav class="site-footer__links">
+      <a href="Diary.html">Diary</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </footer> -->
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
+</body>
+
+</html>
